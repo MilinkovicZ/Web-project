@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfFitnesCentar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FitnesCentar>
+    <Naziv>Ahilej Novi</Naziv>
+    <AdresaFitnesCentra>
+      <Ulica>Kralja Milana</Ulica>
+      <Broj>24</Broj>
+      <Grad>Beograd</Grad>
+      <PostanskiBroj>19000</PostanskiBroj>
+    </AdresaFitnesCentra>
+    <GodinaOtvaranja>2017</GodinaOtvaranja>
+    <Vlasnik>vlasnik3</Vlasnik>
+    <MesecnaCena>2600</MesecnaCena>
+    <GodisnjaCena>25000</GodisnjaCena>
+    <CenaJednogTreninga>1000</CenaJednogTreninga>
+    <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+    <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+    <Obrisan>false</Obrisan>
+    <Id>3</Id>
+  </FitnesCentar>
+  <FitnesCentar>
+    <Naziv>Brus Li</Naziv>
+    <AdresaFitnesCentra>
+      <Ulica>Petra Drapsina</Ulica>
+      <Broj>33</Broj>
+      <Grad>Pirot</Grad>
+      <PostanskiBroj>27500</PostanskiBroj>
+    </AdresaFitnesCentra>
+    <GodinaOtvaranja>2022</GodinaOtvaranja>
+    <Vlasnik>vlasnik1</Vlasnik>
+    <MesecnaCena>2200</MesecnaCena>
+    <GodisnjaCena>21350</GodisnjaCena>
+    <CenaJednogTreninga>800</CenaJednogTreninga>
+    <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+    <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+    <Obrisan>false</Obrisan>
+    <Id>1</Id>
+  </FitnesCentar>
+  <FitnesCentar>
+    <Naziv>Fitnes Centar Nis</Naziv>
+    <AdresaFitnesCentra>
+      <Ulica>Desanke Maksimovic</Ulica>
+      <Broj>11</Broj>
+      <Grad>Nis</Grad>
+      <PostanskiBroj>31000</PostanskiBroj>
+    </AdresaFitnesCentra>
+    <GodinaOtvaranja>2014</GodinaOtvaranja>
+    <Vlasnik>vlasnik2</Vlasnik>
+    <MesecnaCena>2000</MesecnaCena>
+    <GodisnjaCena>19000</GodisnjaCena>
+    <CenaJednogTreninga>700</CenaJednogTreninga>
+    <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+    <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+    <Obrisan>false</Obrisan>
+    <Id>2</Id>
+  </FitnesCentar>
+  <FitnesCentar>
+    <Naziv>Fitnes Centar Sarajevo</Naziv>
+    <AdresaFitnesCentra>
+      <Ulica>Gradska</Ulica>
+      <Broj>24</Broj>
+      <Grad>Sarajevo</Grad>
+      <PostanskiBroj>12000</PostanskiBroj>
+    </AdresaFitnesCentra>
+    <GodinaOtvaranja>2024</GodinaOtvaranja>
+    <Vlasnik>vlasnik2</Vlasnik>
+    <MesecnaCena>1200</MesecnaCena>
+    <GodisnjaCena>9000</GodisnjaCena>
+    <CenaJednogTreninga>600</CenaJednogTreninga>
+    <CenaJednogTreningaGrupni>550</CenaJednogTreningaGrupni>
+    <CenaJednogTreningaPersonalni>800</CenaJednogTreningaPersonalni>
+    <Obrisan>true</Obrisan>
+    <Id>1416</Id>
+  </FitnesCentar>
+  <FitnesCentar>
+    <Naziv>Zver</Naziv>
+    <AdresaFitnesCentra>
+      <Ulica>Becejska</Ulica>
+      <Broj>11</Broj>
+      <Grad>Becej</Grad>
+      <PostanskiBroj>19000</PostanskiBroj>
+    </AdresaFitnesCentra>
+    <GodinaOtvaranja>2021</GodinaOtvaranja>
+    <Vlasnik>vlasnik3</Vlasnik>
+    <MesecnaCena>800</MesecnaCena>
+    <GodisnjaCena>6600</GodisnjaCena>
+    <CenaJednogTreninga>550</CenaJednogTreninga>
+    <CenaJednogTreningaGrupni>600</CenaJednogTreningaGrupni>
+    <CenaJednogTreningaPersonalni>650</CenaJednogTreningaPersonalni>
+    <Obrisan>false</Obrisan>
+    <Id>4775</Id>
+  </FitnesCentar>
+  <FitnesCentar>
+    <Naziv>Top Fit</Naziv>
+    <AdresaFitnesCentra>
+      <Ulica>Fruskogorska</Ulica>
+      <Broj>11</Broj>
+      <Grad>Novi Sad</Grad>
+      <PostanskiBroj>21000</PostanskiBroj>
+    </AdresaFitnesCentra>
+    <GodinaOtvaranja>2022</GodinaOtvaranja>
+    <Vlasnik>vlasnik3</Vlasnik>
+    <MesecnaCena>1400</MesecnaCena>
+    <GodisnjaCena>12000</GodisnjaCena>
+    <CenaJednogTreninga>900</CenaJednogTreninga>
+    <CenaJednogTreningaGrupni>940</CenaJednogTreningaGrupni>
+    <CenaJednogTreningaPersonalni>1050</CenaJednogTreningaPersonalni>
+    <Obrisan>false</Obrisan>
+    <Id>8642</Id>
+  </FitnesCentar>
+</ArrayOfFitnesCentar>

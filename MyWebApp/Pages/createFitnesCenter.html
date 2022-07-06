@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Create new Fitnes Center</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {            
+            hideURLParams();
+
+            $('#btnCreate').click(function () {
+                create();
+            });
+        });
+
+        function create() {
+            let naziv = $('#naziv').val();
+            if (naziv.replace(/\s+/g, '').length == 0) {
+                alert("Naziv nije unet");
+                return;
+            }
+
+            let grad = $('#grad').val();
+            if (grad.replace(/\s+/g, '').length == 0) {
+                alert("Grad nije unet");
+                return;
+            }
+
+            let ulica = $('#ulica').val();
+            if (ulica.replace(/\s+/g, '').length == 0) {
+                alert("Ulica nije uneta");
+                return;
+            }
+
+            let broj = $('#broj').val();
+            if (broj <= 0) {
+                alert("Broj[adresa] mora biti validan");
+                return;
+            }
+
+            let pbroj = $('#pBroj').val();
+            if (pbroj <= 0) {
+                alert("Postanski Broj[adresa] mora biti validan");
+                return;
+            }
+
+            let godOtvaranja = $('#godOtvaranja').val();
+            if (godOtvaranja <= 2000) {
+                alert("Godina otvaranja mora biti validna (>2000)");
+                return;
+            }
+
+            let mesCena = $('#mesCena').val();
+            if (mesCena <= 0) {
+                alert("Mesecna cena mora biti validna");
+                return;
+            }
+
+            let godCena = $('#godCena').val();
+            if (godCena <= 0) {
+                alert("Godisnja cena mora biti validna");
+                return;
+            }
+
+            let cenaJT = $('#cenaJT').val();
+            if (cenaJT <= 0) {
+                alert("Cena jednog treninga mora biti validna");
+                return;
+            }
+
+            let cenaJTG = $('#cenaJTG').val();
+            if (cenaJTG <= 0) {
+                alert("Cena jenog treninga (grupnog) mora biti validna");
+                return;
+            }
+
+            let cenaJTP = $('#cenaJTP').val();
+            if (cenaJTP <= 0) {
+                alert("Cena jenog treninga (personalnog) mora biti validna");
+                return;
+            }
+
+            let username = sessionStorage.getItem("username")
+
+            $.post('api/vlasnik/' + username, {
+                'Naziv': naziv,
+                'AdresaFitnesCentra': {
+                    'Grad': grad, 'Ulica': ulica, 'Broj': broj, 'PostanskiBroj': pbroj
+                },
+                "GodinaOtvaranja": godOtvaranja, 'Vlasnik': username, 'MesecnaCena': mesCena, 'GodisnjaCena': godCena, 'CenaJednogTreninga': cenaJT, 'CenaJednogTreningaGrupni': cenaJTG, 'CenaJednogTreningaPersonalni': cenaJTP
+            },
+                function (result) {
+                    alert('Uspesno napravljen fitnes centar!');
+                    $('#naziv').val('');
+                    $('#grad').val('');
+                    $('#ulica').val('');
+                    $('#broj').val('');
+                    $('#godOtvaranja').val('');
+                    $('#mesCena').val('');
+                    $('#godCena').val('');
+                    $('#cenaJT').val('');
+                    $('#cenaJTG').val('');
+                    $('#cenaJTP').val('');
+                    window.location.href = 'Pages/index.html';
+                });
+        }
+
+        function logout() {
+            sessionStorage.removeItem("username");
+        }
+
+        function hideURLParams() {
+            history.pushState({}, "", '/CreateFC');
+        }
+
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="left" href="Pages/index.html">Home</a></li>
+            <li><a class="right" href="Pages/index.html" onclick="logout()">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <h1>Create new fitnes center!</h1>
+    <table>
+        <tr>
+            <td><label class="labela">Naziv:</label></td>
+            <td><input class="inputType" type="text" name="Naziv" placeholder="Naziv" id="naziv" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Grad:</label></td>
+            <td><input class="inputType" type="text" name="Grad" placeholder="Grad" id="grad" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Ulica:</label></td>
+            <td><input class="inputType" type="text" name="Ulica" placeholder="Ulica" id="ulica" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Broj:</label></td>
+            <td><input class="inputType" type="number" name="Broj" placeholder="Broj" id="broj" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Postanski broj:</label></td>
+            <td><input class="inputType" type="number" name="PBroj" placeholder="Postanski broj" id="pBroj" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Godina otvaranja:</label></td>
+            <td><input class="inputType" type="number" name="GodOtvaranja" placeholder="Godina otvaranja" id="godOtvaranja" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Mesecna cena:</label></td>
+            <td><input class="inputType" type="number" name="MesCena" placeholder="Mesecna cena" id="mesCena" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Godisnja cena:</label></td>
+            <td><input class="inputType" type="number" name="GodCena" placeholder="Godisnja cena" id="godCena" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Cena jednog treninga:</label></td>
+            <td><input class="inputType" type="number" name="CenaJT" placeholder="Cena jednog treninga" id="cenaJT" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Cena jednog treninga(grupni):</label></td>
+            <td><input class="inputType" type="number" name="CenaJTG" placeholder="Cena jednog grupnog" id="cenaJTG" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Cena jednog treninga(personalni):</label></td>
+            <td><input class="inputType" type="number" name="CenaJTP" placeholder="Cena jednog personalnog" id="cenaJTP" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input class="btnSort" type="submit" value="Napravi fitnes centar" id="btnCreate" />
+            </td>
+        </tr>
+    </table>    
+</body>
+</html>

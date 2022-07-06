@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Fitnes Centri</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../Scripts/jquery-3.3.1.js"></script>    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            hideURLParams();
+            loadFitnesCentri("naziv", "1");
+            let klikNaziv = true;
+            let klikAdresa = true;
+            let klikGodina = true;
+
+            $('#btnName').click(function () {
+                let nacin = "naziv";
+                if (klikNaziv) {
+                    id = "2";
+                    klikNaziv = false;
+                }
+                else {
+                    id = "1";
+                    klikNaziv = true;
+                }
+
+                loadFitnesCentri(nacin, id);
+            });
+
+            $('#btnAddress').click(function () {
+                let nacin = "adresa";
+                if (klikAdresa) {
+                    id = "1";
+                    klikAdresa = false;
+                }
+                else {
+                    id = "2";
+                    klikAdresa = true;
+                }
+
+                loadFitnesCentri(nacin, id);
+            });
+
+            $('#btnYear').click(function () {
+                let nacin = "godina";
+                if (klikGodina) {
+                    id = "1";
+                    klikGodina = false;
+                }
+                else {
+                    id = "2";
+                    klikGodina = true;
+                }
+
+                loadFitnesCentri(nacin, id);
+            });
+
+            $('#btnFilter').click(function () {
+                console.log("Filtriram...");
+                loadFilterFitnesCentri();
+                event.preventDefault();
+            });
+
+            let username = sessionStorage.getItem("username");
+            console.log(username);
+            if (username != null) {
+                $("a[name=login]").hide();
+                $("a[name=register]").hide();
+                $("a[name=profile]").show();
+                $("a[name=logout]").show();
+                $("a[name=history").hide();
+                $("a[name=historyTrener").hide();
+                $("a[name=create").hide();
+                $("a[name=fitnesCentri]").hide();
+                $("a[name=createFC]").hide();
+                $.get('api/user/' + sessionStorage.getItem("username"), function (data, status) {
+                    if (data.UlogaKorisnika == 0)
+                        $("a[name=history").show();
+                    else if (data.UlogaKorisnika == 1) {
+                        $("a[name=historyTrener").show();
+                        $("a[name=create").show();
+                    }
+                    else {
+                        $("a[name=fitnesCentri]").show();
+                        $("a[name=createFC]").show();
+                    }
+                });
+            }
+            else {
+                $("a[name=login]").show();
+                $("a[name=register]").show();
+                $("a[name=profile]").hide();
+                $("a[name=logout]").hide();
+                $("a[name=history").hide();
+                $("a[name=historyTrener").hide();
+                $("a[name=create").hide();
+                $("a[name=fitnesCentri]").hide();
+                $("a[name=createFC]").hide();
+            }
+
+            $(document).on("click", ".btnDetails", function () {
+                let id = $(this).attr("name");
+                localStorage.setItem("tempId", id);
+                window.location.href = "Pages/details.html";
+            });
+
+        });
+
+        function loadFitnesCentri(nacin, id) {
+            console.log('Ucitavam fitnes centre...');
+            $.get("api/fitnescentar/" + nacin + "/" + id, function (data, status) {
+                let tabelaFitnesCentar = '<table class="content-table">';
+                tabelaFitnesCentar += '<thead><tr><th>Naziv</th><th>Adresa</th><th>Godina otvaranja</th><th>Detalji</th></tr></thead>';
+                for (element in data) {
+                    if (data[element].Obrisan == false) {
+                        let fitnesCentar = '<td>' + data[element].Naziv + '</td>';
+                        fitnesCentar += '<td>' + data[element].AdresaFitnesCentra.Ulica + " " + data[element].AdresaFitnesCentra.Broj + '</td>';
+                        fitnesCentar += '<td align="center">' + data[element].GodinaOtvaranja + '</td>';
+                        fitnesCentar += '<td><input type="submit" value="Detalji" class="btnDetails" name="' + data[element].Id + '"/></td>';
+                        tabelaFitnesCentar += '<tr>' + fitnesCentar + '</tr>';
+                    }
+                }
+                tabelaFitnesCentar += '</table>';
+                $('#content').html(tabelaFitnesCentar);
+                console.log('Uspesno ucitano');
+            });
+        }
+
+        function loadFilterFitnesCentri() {
+            let naziv = $("input[name=nazivfilter]").val();
+            let adresa = $("input[name=adresa]").val();
+            let minGod = $("input[name=minGodina]").val();
+            let maxGod = $("input[name=maxGodina]").val();
+
+            min = parseInt(minGod);
+            max = parseInt(maxGod);
+
+            if (minGod != "" && (isNaN(min) || min < 1950))
+                alert('NEVALIDNA MIN GODINA!');
+            else if (maxGod != "" && (isNaN(max) || max > 2022))
+                alert('NEVALIDNA MAX GODINA!');
+            else {
+                $.get("api/filter?naziv=" + naziv + "&adresa=" + adresa + "&minGodina=" + minGod + "&maxGodina=" + maxGod, function (data, status) {
+                    let tabelaFitnesCentar = '<table class="content-table">';
+                    tabelaFitnesCentar += '<thead><tr><th>Naziv</th><th>Adresa</th><th>Godina otvaranja</th><th>Detalji</th></tr></thead>';
+                    for (element in data) {
+                        if (data[element].Obrisan == false) {
+                            let fitnesCentar = '<td>' + data[element].Naziv + '</td>';
+                            fitnesCentar += '<td>' + data[element].AdresaFitnesCentra.Ulica + " " + data[element].AdresaFitnesCentra.Broj + '</td>';
+                            fitnesCentar += '<td align="center">' + data[element].GodinaOtvaranja + '</td>';
+                            fitnesCentar += '<td><input type="submit" value="Detalji" class="btnDetails" name="' + data[element].Id + '"/></td>';
+                            tabelaFitnesCentar += '<tr>' + fitnesCentar + '</tr>';
+                        }
+                    }
+                    tabelaFitnesCentar += '</table>';
+                    $('#content').html(tabelaFitnesCentar);
+                });
+            }
+        }
+
+        function logout() {
+            sessionStorage.removeItem("username");
+        }
+
+        function hideURLParams() {
+            history.pushState({}, "", '/index.html');
+        }
+    </script>
+</head>
+<body>  
+
+    <nav>
+        <ul>
+            <li><a name="login" class="right" href="Pages/login.html">Log In</a></li>
+            <li><a name="register" class="right" href="Pages/register.html">Register</a></li>
+            <li><a name="profile" class="left" href="Pages/profile.html">My Profile</a></li>
+            <li><a name="history" class="left" href="Pages/history.html">History of trainings</a></li>
+            <li><a name="historyTrener" class="left" href="Pages/trainerTrainings.html">My all trainings</a></li>
+            <li><a name="create" class="left" href="Pages/createTraining.html">Create new training</a></li>
+            <li><a name="fitnesCentri" class="left" href="Pages/fitnesCentri.html">My fitnes centers</a></li>
+            <li><a name="createFC" class="left" href="Pages/createFitnesCenter.html">Create fitnes center</a></li>    
+            <li><a name="logout" class="right" href="Pages/index.html" onclick="logout()">Log Out</a></li>
+        </ul>
+    </nav>       
+
+    <h1 style="margin-left: 200px">Fitnes Centri</h1>
+
+    <div id="content"></div>    
+    <h2>Sortiraj:</h2>
+    <input type="submit" class="btnSort" size="15" value="Naziv" id="btnName" />
+    <input type="submit" class="btnSort" value="Adresa" id="btnAddress" />
+    <input type="submit" class="btnSort" value="Godina otvaranja" id="btnYear" /><br /><br />
+
+    <h2>Filtriranje:</h2>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label class="labela">Naziv:</label>
+                </td>
+                <td>
+                    <input class="inputType" type="text" placeholder="Naziv" name="nazivfilter" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="labela">Adresa:</label>
+                </td>
+                <td>
+                    <input class="inputType" type="text" placeholder="Ulica broj" name="adresa" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="labela">Godina:</label>
+                </td>
+                <td>
+                    <input class="inputType" type="text" placeholder="1950" name="minGodina" />-<input type="text" class="inputType" placeholder="2022" name="maxGodina" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" class="btnSort" value="Filter" id="btnFilter" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

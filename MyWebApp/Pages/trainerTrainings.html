@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Trainings</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            hideURLParams();
+            showFutureTrainings();
+            showHistoryTrainings("naziv", "1");
+
+            let klikNaziv = true;
+            let klikTip = true;
+            let klikVreme = true;
+
+            $('#btnName').click(function () {
+                let nacin = "naziv";
+                if (klikNaziv) {
+                    id = "2";
+                    klikNaziv = false;
+                }
+                else {
+                    id = "1";
+                    klikNaziv = true;
+                }
+
+                showHistoryTrainings(nacin, id);
+            });
+
+            $('#btnTraining').click(function () {
+                let nacin = "tipTreninga";
+                if (klikTip) {
+                    id = "1";
+                    klikTip = false;
+                }
+                else {
+                    id = "2";
+                    klikTip = true;
+                }
+
+                showHistoryTrainings(nacin, id);
+            });
+
+            $('#btnTime').click(function () {
+                let nacin = "vreme";
+                if (klikVreme) {
+                    id = "1";
+                    klikVreme = false;
+                }
+                else {
+                    id = "2";
+                    klikVreme = true;
+                }
+
+                showHistoryTrainings(nacin, id);
+            });
+
+            $('#btnFilter').click(function () {
+                console.log("Filtriram...");
+                loadFilterTrainings();
+                event.preventDefault();
+            });
+
+            $(document).on("click", ".btnPrisutni", function () {
+                let naziv = $(this).attr("name");
+                prikazPristunih(naziv);
+            });
+
+            $(document).on("click", ".btnObrisi", function () {
+                let id = $(this).attr("name")
+                obrisi(id);
+            });
+
+            $(document).on("click", ".btnModify", function () {
+                let id = $(this).attr("name")
+                console.log(id)
+                window.localStorage.setItem("idTrening", id);
+                window.location.href = "Pages/modifyTraining.html";
+            });
+
+        });
+
+        function showFutureTrainings() {
+            let username = sessionStorage.getItem("username");
+            $.get("api/trenerov/" + username, function (data, status) {
+                let futureTraining = '<table class="content-table"><thead><th>Naziv</th><th>Tip</th><th>Vreme Odrzavanja</th><th>Fitnes Centar</th><th>Trajanje</th><th>Broj Prijavljenih</th><th>Obrisi</th><th>Azuriraj</th></thead>';
+                for (element in data) {
+                    if (data[element].Obrisan == false) {
+                        let tipTreninga = "YOGA";
+                        if (data[element].TipTreninga == 1) {
+                            tipTreninga = "LES_MILLS_TONE"
+                        }
+                        else if (data[element].TipTreninga == 2) {
+                            tipTreninga = "BODY_PUMP"
+                        }
+
+                        let trening = '<td>' + data[element].Naziv + '</td>';
+                        trening += '<td>' + tipTreninga + '</td>';
+                        trening += '<td>' + data[element].VremeTreninga + '</td>';
+                        trening += '<td align="center">' + data[element].FitnesCentarOdrzavanja.Naziv + '</td>';
+                        trening += '<td align="center">' + data[element].TrajanjeTreninga + '</td>';
+                        trening += '<td align="center"><input type="submit", class="btnPrisutni", value="' + data[element].SpisakPosetilaca.length + '", name="' + data[element].Id + '"/></td>';
+                        trening += '<td><input type="submit", class="btnObrisi", value="Obrisi", name="' + data[element].Id + '"/></td>';
+                        trening += '<td><input type="submit", class="btnModify", value="Azuriraj", name="' + data[element].Id + '"/></td>';
+                        futureTraining += '<tr>' + trening + '</tr>';
+                    }
+                }
+                futureTraining += '</table>';
+                $('#aktuelni').html(futureTraining);
+            });
+        }
+
+        function showHistoryTrainings(nacin, id) {
+            let username = sessionStorage.getItem("username");
+            $.get("api/history/" + username + "/" + nacin + "/" + id, function (data, status) {
+                let historyTraining = '<table class="content-table"><thead><th>Naziv</th><th>Tip</th><th>Vreme Odrzavanja</th><th>Fitnes Centar</th><th>Trajanje</th><th>Broj Prijavljenih</th></thead>';
+                for (element in data) {
+                    let tipTreninga = "YOGA";
+                    if (data[element].TipTreninga == 1) {
+                        tipTreninga = "LES_MILLS_TONE"
+                    }
+                    else if (data[element].TipTreninga == 2) {
+                        tipTreninga = "BODY_PUMP"
+                    }
+
+                    let trening = '<td>' + data[element].Naziv + '</td>';
+                    trening += '<td>' + tipTreninga + '</td>';
+                    trening += '<td>' + data[element].VremeTreninga + '</td>';
+                    trening += '<td align="center">' + data[element].FitnesCentarOdrzavanja.Naziv + '</td>';
+                    trening += '<td align="center">' + data[element].TrajanjeTreninga + '</td>';
+                    trening += '<td align="center"><input type="submit", class="btnPrisutni", value="' + data[element].SpisakPosetilaca.length + '", name="' + data[element].Id + '"/></td>';
+                    historyTraining += '<tr>' + trening + '</tr>';
+                }
+                historyTraining += '</table>';
+                $('#prosli').html(historyTraining);
+            });
+        }
+
+        function loadFilterTrainings() {
+            let username = sessionStorage.getItem("username");
+            let naziv = $("input[name=nazivFilter]").val();
+            let tt = $("input[name=tip]").val();
+            let minVr = $("input[name=minVreme]").val();
+            let maxVr = $("input[name=maxVreme]").val();
+
+            min = Date.parse(minVr);
+            max = Date.parse(maxVr);
+
+            if (minVr != "" && isNaN(min))
+                alert('NEVALIDAN MIN DATUM!');
+            else if (maxVr != "" && isNaN(max))
+                alert('NEVALIDAN MAX DATUM!');
+            else {
+                $.get("api/trener/" + username + "?naziv=" + naziv + "&tipTreninga=" + tt + "&minVreme=" + minVr + "&maxVreme=" + maxVr, function (data, status) {
+                    let historyTraining = '<table class="content-table"><thead><th>Naziv</th><th>Tip</th><th>Vreme Odrzavanja</th><th>Fitnes Centar</th><th>Trajanje</th><th>Broj Prijavljenih</th></thead>';
+                    for (element in data) {
+                        let tipTreninga = "YOGA";
+                        if (data[element].TipTreninga == 1) {
+                            tipTreninga = "LES_MILLS_TONE"
+                        }
+                        else if (data[element].TipTreninga == 2) {
+                            tipTreninga = "BODY_PUMP"
+                        }
+
+                        let trening = '<td>' + data[element].Naziv + '</td>';
+                        trening += '<td>' + tipTreninga + '</td>';
+                        trening += '<td>' + data[element].VremeTreninga + '</td>';
+                        trening += '<td align="center">' + data[element].FitnesCentarOdrzavanja.Naziv + '</td>';
+                        trening += '<td align="center">' + data[element].TrajanjeTreninga + '</td>';
+                        trening += '<td align="center"><input type="submit", class="btnPrisutni", value="' + data[element].SpisakPosetilaca.length + '", name="' + data[element].Id + '"/></td>';
+                        historyTraining += '<tr>' + trening + '</tr>';
+                    }
+                    historyTraining += '</table>';
+                    $('#prosli').html(historyTraining);
+                });
+            }
+        }
+
+        function prikazPristunih(idTreninga) {
+            console.log(idTreninga)
+            $.get('api/trening/' + idTreninga, function (data, status) {
+                let prisutni = '<h2>Spisak prijavljenih:</h2>'
+                prisutni += '<ol>';
+                for (element in data) {
+                    prisutni += '<li><label class="labela">' + data[element] + '</label></li>';
+                }
+                prisutni += '</ol>';
+                $('#prisutni').html(prisutni);
+            });
+        }
+
+        function obrisi(id) {
+            console.log(id);
+            if (confirm("Da li zeltie da obrisete trening?") == true) {
+                $.ajax({
+                    url: "api/trening/" + id,
+                    method: "DELETE",
+                    success: (result) => { alert("Uspesno obrisan!"); window.location.href = "Pages/trainerTrainings.html" },
+                    error: (xhr, status, err) => { alert("Nije obrisan! Ima prijavljenih korisnika!") }
+                }).done();
+            }
+        }
+
+        function logout() {
+            sessionStorage.removeItem("username");
+        }
+
+        function hideURLParams() {
+            history.pushState({}, "", '/Trainings');
+        }
+
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="left" href="Pages/index.html">Home</a></li>     
+            <li><a class="right" href="Pages/index.html" onclick="logout()">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <h1>PREDSTOJECI TRENINZI:</h1>
+    <div id="aktuelni"></div>
+    <h1>ODRZANI TRENINZI:</h1>
+    <div id="prosli"></div>
+    <input class="btnSort" type="submit" value="Sortiraj Po Nazivu" id="btnName" />
+    <input class="btnSort" type="submit" value="Sortiraj Po Tipu Treninga" id="btnTraining" />
+    <input class="btnSort" type="submit" value="Sortiraj Po Vremenu Odrzavanja" id="btnTime" /><br /><br />
+    <div id="prisutni"></div><br /><br />
+    <h2>Filtriranje:</h2>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label class="labela">Naziv:</label>
+                </td>
+                <td>
+                    <input class="inputType" type="text" placeholder="Naziv" name="nazivFilter" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="labela">Tip Treninga:</label>
+                </td>
+                <td>
+                    <input class="inputType" type="text" placeholder="Tip" name="tip" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="labela">Vreme:</label>
+                </td>
+                <td>
+                    <input class="inputType" type="text" placeholder="YYYY-MM-DD" name="minVreme" />-<input class="inputType" type="text" placeholder="YYYY-MM-DD" name="maxVreme" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input class="btnSort" type="submit" value="Filter" id="btnFilter" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br />
+</body>
+</html>

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Modify fitness center</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            hideURLParams();
+            showDetails();
+
+            $(document).on("click", "#btnUpdate", function () {
+                changeDetails();
+            });
+        });
+
+        function changeDetails() {
+            let id = window.localStorage.getItem("idFitnesCentar");
+            $.ajax({
+                url: "api/vlasnik/" + id,
+                method: "PUT",
+                data:
+                {
+                    'Naziv': $("#naziv").val(),
+                    'AdresaFitnesCentra':
+                    {
+                        'Grad': $("#grad").val(),
+                        'Ulica': $("#ulica").val(),
+                        'Broj': $("#broj").val(),
+                        'PostanskiBroj': $("#pbroj").val(),
+                    },
+                    'GodinaOtvaranja': $("#godOtvaranja").val(),
+                    'MesecnaCena': $("#mesCena").val(),
+                    'GodisnjaCena': $("#godCena").val(),
+                    'CenaJednogTreninga': $("#cenaJT").val(),
+                    'CenaJednogTreningaGrupni': $("#cenaJTG").val(),
+                    'CenaJednogTreningaPersonalni': $("#cenaJTP").val(),
+                },
+                success: (result) => { alert("Uspesno"); window.location.href = "Pages/modifyFitnesCentar.html" },
+                error: (xhr, status, err) => { alert("Failed to change!") }
+            }).done();
+        }
+
+        function showDetails() {
+            let id = window.localStorage.getItem("idFitnesCentar");
+
+            $.get("api/fitnescentar/" + id, function (data, status) {
+                let naslov = "Azuriranje fitnes centra, " + data.Naziv + ":";
+                $("#h1n").html(naslov);
+
+                let table = `<table>
+                        <tr>
+                            <td><label class="labela">Naziv:</label></td>
+                            <td><input class="inputType" type="text" name="Naziv" id="naziv" value="${data.Naziv}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Grad:</label></td>
+                            <td><input class="inputType" type="text" name="Grad" id="grad" value="${data.AdresaFitnesCentra.Grad}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Ulica:</label></td>
+                            <td><input class="inputType" type="text" name="Ulica" id="ulica" value="${data.AdresaFitnesCentra.Ulica}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Broj:</label></td>
+                            <td><input class="inputType" type="number" name="Broj" id="broj" value="${data.AdresaFitnesCentra.Broj}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Postanski broj:</label></td>
+                            <td><input class="inputType" type="number" name="PBroj" id="pbroj" value="${data.AdresaFitnesCentra.PostanskiBroj}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Godina otvaranja:</label></td>
+                            <td><input class="inputType" type="number" name="GodOtvaranja" id="godOtvaranja" value="${data.GodinaOtvaranja}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Mesecna cena:</label></td>
+                            <td><input class="inputType" type="number" name="MesCena" id="mesCena" value="${data.MesecnaCena}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Godisnja cena:</label></td>
+                            <td><input class="inputType" type="number" name="GodCena" id="godCena" value="${data.GodisnjaCena}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Cena jednog treninga:</label></td>
+                            <td><input class="inputType" type="number" name="CenaJT" id="cenaJT" value="${data.CenaJednogTreninga}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Cena jednog treninga(grupni):</label></td>
+                            <td><input class="inputType" type="number" name="CenaJTG" id="cenaJTG" value="${data.CenaJednogTreningaGrupni}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Cena jednog treninga(personalni):</label></td>                            
+                            <td><input class="inputType" type="number" name="CenaJTP" id="cenaJTP" value="${data.CenaJednogTreningaPersonalni}" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input class="btnSort" type="submit" value="Azuriraj Fitnes Centar" id="btnUpdate" />
+                            </td>
+                        </tr>
+                    </table>`
+
+                $("#trenutni").html(table);
+            });
+
+        }
+
+        function logout() {
+            sessionStorage.removeItem("username");
+        }
+
+        function hideURLParams() {
+            history.pushState({}, "", '/ModifyFC');
+        }
+
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="left" href="Pages/index.html">Home</a></li>
+            <li><a class="left" href="Pages/fitnesCentri.html">My Fitnes Centers</a></li>
+            <li><a class="right" href="Pages/index.html" onclick="logout()">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="h1n"></h1>
+    <div id="trenutni"></div>
+</body>
+</html>

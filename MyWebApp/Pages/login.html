@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            hideURLParams();
+
+            $('#btnLogin').click(function () {
+                login();
+            });
+        });
+
+        function login() {
+            let naziv = $('#naziv').val();
+            if (naziv.replace(/\s+/g, '').length == 0) {
+                alert("Username nije unet!");
+                return;
+            }
+
+            let lozinka = $('#lozinka').val();
+            if (lozinka.replace(/\s+/g, '').length == 0) {
+                alert("Lozinka nije uneta");
+                return
+            }
+
+            $.post('api/authentificator/login', { 'KorisnickoIme': naziv, 'Lozinka': lozinka },
+                function (result) {
+                    $('#naziv').val('');
+                    $('#lozinka').val('');
+                    sessionStorage.setItem("username", naziv);
+                    window.location.href = 'Pages/index.html';
+                })
+                .fail(function () {
+                    alert("Bezuspesna prijava.")
+                });
+        }
+
+        function hideURLParams() {
+            history.pushState({}, "", '/Login');
+        }
+
+
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="left" href="Pages/index.html">Home</a></li>
+            <li><a class="right" href="Pages/register.html">Sign Up!</a><br /></li>
+        </ul>
+    </nav>
+
+    <h1>Please, Log in!</h1>
+    <table>
+        <tr>
+            <td>
+                <label class="labela">Korisnicko Ime:</label>
+            </td>
+            <td>
+                <input type="text" class="inputType" id="naziv" placeholder="Korisnicko ime" name="naziv" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="labela">Lozinka:</label>
+            </td>
+            <td>
+                <input type="password" class="inputType" id="lozinka" placeholder="Lozinka" name="lozinka" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input class="btnSort" type="submit" value="Log In" id="btnLogin" /></td>
+        </tr>
+    </table>    
+</body>
+</html>

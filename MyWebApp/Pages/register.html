@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            hideURLParams();
+
+            $('#btnRegister').click(function () {
+                register();
+            });
+        });
+
+        function register() {
+            let ime = $('#ime').val();
+            if (ime.replace(/\s+/g, '').length == 0) {
+                alert("Ime nije uneto");
+                return;
+            }
+            let prezime = $('#prezime').val();
+            if (prezime.replace(/\s+/g, '').length == 0) {
+                alert("Prezime nije uneto");
+                return;
+            }
+            let kime = $('#kime').val();
+            if (kime.replace(/\s+/g, '').length == 0) {
+                alert("Korisicko ime nije uneto");
+                return;
+            }
+            let lozinka = $('#lozinka').val();
+            if (lozinka.replace(/\s+/g, '').length == 0) {
+                alert("Lozinka nije uneta");
+                return;
+            }
+            let email = $('#email').val();
+            if (email.replace(/\s+/g, '').length == 0) {
+                alert("Email nije unet");
+                return;
+            }
+            if (!email.includes('@') || !email.includes('.com')) {
+                alert("Email je u losem formatu");
+                return;
+            }
+            let datum = $('#datum').val();
+            if (datum.length == 0) {
+                alert("Datum nije unet");
+                return;
+            }
+
+            let pol = document.getElementById('lista.pol').value;
+
+            $.get('api/user', function (data, status) {
+                for (user in data) {
+                    if (data[user].KorisnickoIme == kime)
+                        alert('Vec postoji korisinik sa tim korisicnim imenom!');
+                }
+            });
+
+            $.post('api/authentificator', { 'Ime': ime, 'Prezime': prezime, 'KorisnickoIme': kime, 'Lozinka': lozinka, 'Email': email, 'Date': datum, 'DatumRodjenja': datum, 'PolKorisnika': pol },
+                function (result) {
+                    alert('Uspesno registrovan!');
+                    $('#ime').val('');
+                    $('#prezime').val('');
+                    $('#kime').val('');
+                    $('#lozinka').val('');
+                    $('#email').val('');
+                    $('#datum').val('');
+                    $('#pol').val('');
+                    window.location.href = 'Pages/login.html';
+                });
+        }
+
+        function hideURLParams() {
+            history.pushState({}, "", '/Register');
+        }
+
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="left" href="Pages/index.html">Home</a></li>
+            <li><a class="right" href="Pages/login.html">Log in</a></li>
+        </ul>
+    </nav>
+    <h1>Please, Register!</h1>
+    <table>
+        <tr>
+            <td><label class="labela">Ime:</label></td>
+            <td><input class="inputType" type="text" name="Ime" placeholder="Ime" id="ime" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Prezime:</label></td>
+            <td><input class="inputType" type="text" name="Prezime" placeholder="Prezime" id="prezime" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Korisnicko Ime:</label></td>
+            <td><input class="inputType" type="text" name="KorisnickoIme" placeholder="Korisnicko Ime" id="kime" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Lozinka:</label></td>
+            <td><input class="inputType" type="password" name="Lozinka" placeholder="Lozinka" id="lozinka" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Email:</label></td>
+            <td><input class="inputType" type="email" name="Email" placeholder="xxxxxxx@xxxxx.com" id="email" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Datum Rodjenjda:</label></td>
+            <td><input class="inputType" type="date" name="DatumRodjenja" id="datum" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Pol:</label></td>
+            <td>
+                <input class="inputType" list="lista.pol-datalist" id="lista.pol" placeholder="MUSKI" />
+                <datalist id="lista.pol-datalist">
+                    <option value="MUSKI" />
+                    <option value="ZENSKI" />
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" class="btnSort" value="Registruj se" id="btnRegister" />
+            </td>
+        </tr>
+    </table>    
+</body>
+</html>

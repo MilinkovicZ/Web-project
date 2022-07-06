@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Create Training</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            hideURLParams();
+
+            $('#btnCreate').click(function () {
+                create();
+            });
+        });
+
+        function create() {
+            let naziv = $('#naziv').val();
+            if (naziv.replace(/\s+/g, '').length == 0) {
+                alert("Naziv nije unet");
+                return;
+            }
+
+            let nazivFitnesCentra = $('#nazivFitnesCentra').val();
+            if (nazivFitnesCentra.replace(/\s+/g, '').length == 0) {
+                alert("Naziv fitnes centra nije unet");
+                return;
+            }
+            let trajanje = $('#trajanje').val();
+            if (trajanje <= 0) {
+                alert("Trajanje biti pozitivno");
+                return;
+            }
+            let vremeTreninga = $('#vremeTreninga').val();
+            if (vremeTreninga.length == 0) {
+                alert("Vreme treninga nije uneto");
+                return;
+            }
+            if (isNaN(Date.parse(vremeTreninga))) {
+                alert("Vreme treninga nije u dobrom formatu")
+                return;
+            }
+
+            let maksBroj = $('#maksBr').val();
+            if (maksBroj <= 0) {
+                alert("Maks broj mora biti pozitivan");
+                return;
+            }
+
+            let tip = document.getElementById('lista.tip').value; //Jquery ne prepoznaje unutar datalist
+            console.log(tip);
+
+            $.post('api/trening/' + sessionStorage.getItem("username"), {
+                'Naziv': naziv, 'TipTreninga': tip, 'FitnesCentarOdrzavanja': { 'Naziv': nazivFitnesCentra }, 'TrajanjeTreninga': trajanje, 'VremeTreninga': vremeTreninga, 'MaksimalanBrojPosetilaca': maksBroj
+            },
+                function (result) {
+                    alert('Uspesno napravljen trening!');
+                    $('#naziv').val('');
+                    $('#tip').val('');
+                    $('#trajanje').val('');
+                    $('#vremeTreninga').val('');
+                    $('#maksBr').val('');
+                    window.location.href = 'Pages/index.html';
+                });
+        }
+
+        function logout() {
+            sessionStorage.removeItem("username");
+        }
+
+        function hideURLParams() {
+            history.pushState({}, "", '/Create');
+        }
+
+    </script>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a class="left" href="Pages/index.html">Home</a></li>
+            <li><a class="right" href="Pages/index.html" onclick="logout()">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <h1>Create new training!</h1>
+    <table>
+        <tr>
+            <td><label class="labela">Naziv:</label></td>
+            <td><input class="inputType" type="text" name="Naziv" placeholder="Naziv treninga" id="naziv" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Tip:</label></td>
+            <td>
+                <input class="inputType" list="lista.tip-datalist" id="lista.tip" placeholder="YOGA" />
+                <datalist id="lista.tip-datalist">
+                    <option value="YOGA" />
+                    <option value="LES_MILLS_TONE" />
+                    <option value="BODY_PUMP" />
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <td><label class="labela">Ime fitnes centra:</label></td>
+            <td><input class="inputType" type="text" name="NazivFitnesCentra" placeholder="Fitnes centar odrzavanja" id="nazivFitnesCentra" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Trajanje:</label></td>
+            <td><input class="inputType" type="number" name="Trajanje" placeholder="Trajanje" id="trajanje" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Vreme treninga:</label></td>
+            <td><input class="inputType" type="text" name="VremeTreninga" placeholder="YYYY-MM-DD HH:MM" id="vremeTreninga" /></td>
+        </tr>
+        <tr>
+            <td><label class="labela">Maksimalan broj posetilaca:</label></td>
+            <td><input class="inputType" type="number" name="MaksBr" placeholder="Broj posetilaca" id="maksBr" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input class="btnSort" type="submit" value="Napravi trening" id="btnCreate" />
+            </td>
+        </tr>
+    </table>  
+</body>
+</html>

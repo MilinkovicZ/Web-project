@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Detaljni prikaz</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            hideURLParams();
+
+            loadFitnesCentar();
+
+            $(document).on("click", ".btnPrijava", function () {
+                prijavaNaTrening($(this).attr("name"));
+            });
+
+            let username = sessionStorage.getItem("username");
+            let idFitnesCentra = localStorage.getItem("tempId");
+            let bioUFitnesCentru = false;
+
+            if (username == null) {
+                $("#komentar").hide();
+            }
+            else {
+                $.get("api/history/" + username + "/naziv/1", function (data, status) { //Vraca sve prosle treninge trenutno prijavljenog usera
+                    for (element in data) {
+                        if (data[element].FitnesCentarOdrzavanja.Id == idFitnesCentra)
+                            bioUFitnesCentru = true;
+                    }
+                    if (!bioUFitnesCentru)
+                        $("#komentar").hide();
+                });
+            }
+
+            $("#komentar input[name=komentar]").click(function () {
+                napisiKomentar();
+            });
+
+            $(document).on("click", ".btnOdobri", function () {
+                let id = $(this).attr("name");
+                odobri(id);
+            });
+            
+            if (username == null) {
+                $("a[name=logout]").hide();
+            }
+        });
+
+        var ime;
+        var ulica;
+        var broj;
+
+        function loadFitnesCentar() {
+            console.log('Ucitavam fitnes centar...');
+            let id = localStorage.getItem("tempId");
+            console.log(id);
+
+            $.get("api/fitnescentar/" + id, function (data, status) {
+                let naslov = 'Fitnes centar "' + data.Naziv + '"';
+                $('#naslov').html(naslov);
+                let fitnesCentar = '<p> Fitnes centar <b>' + data.Naziv + '</b> nalazi se u ' + data.AdresaFitnesCentra.Ulica + ' ' + data.AdresaFitnesCentra.Broj + ' u ' + data.AdresaFitnesCentra.Grad
+                    + 'u(' + data.AdresaFitnesCentra.PostanskiBroj + ").</p>";
+                fitnesCentar += '<p>Mesecna cena je: ' + data.MesecnaCena + ' dinara, dok je godisnja cena ' + data.GodisnjaCena + ' dinara.</p>';
+                fitnesCentar += '<p>Cena jednog treninga: ' + data.CenaJednogTreninga + ' dinara.<br>Cena grupnog treninga: ' + data.CenaJednogTreningaGrupni
+                    + ' dinara.<br>Cena personalnog treninga: ' + data.CenaJednogTreningaPersonalni + ' dinara.</p>';
+                $('#content').html(fitnesCentar);
+                console.log('Uspesno ucitano');
+
+                ime = data.Naziv;
+                ulica = data.AdresaFitnesCentra.Ulica;
+                broj = data.AdresaFitnesCentra.Broj;
+                grad = data.AdresaFitnesCentra.Grad;
+
+                $.get("api/fitnescentar/" + ime + "/" + ulica + "/" + broj, function (data, status) {
+                    let treningTable = '';
+                    if (sessionStorage.getItem("username"))
+                        treningTable += '<table class="content-table"><thead><th>Naziv</th><th>Tip</th><th>Vreme Odrzavanja</th><th>Ukupan broj posetilaca</th><th>Trenutno posetilaca</th><th>Prijavi Se</th></thead>';
+                    else
+                        treningTable += '<table class="content-table"><thead><th>Naziv</th><th>Tip</th><th>Vreme Odrzavanja</th><th>Ukupan broj posetilaca</th><th>Trenutno posetilaca</th></thead>';
+                    for (element in data) {
+                        if (data[element].Obrisan == false) {
+                            let tipTreninga = "YOGA";
+                            if (data[element].TipTreninga == 1) {
+                                tipTreninga = "LES_MILLS_TONE"
+                            }
+                            else if (data[element].TipTreninga == 2) {
+                                tipTreninga = "BODY_PUMP"
+                            }
+
+                            let trening = '<td>' + data[element].Naziv + '</td>';
+                            trening += '<td>' + tipTreninga + '</td>';
+                            trening += '<td>' + data[element].VremeTreninga + '</td>';
+                            trening += '<td align="center">' + data[element].MaksimalanBrojPosetilaca + '</td>';
+                            trening += '<td align="center">' + data[element].SpisakPosetilaca.length + '</td>';
+                            if (sessionStorage.getItem("username"))
+                                trening += '<td align="center"><input type="submit" value="Prijavi se" name="' + data[element].Id + '" class="btnPrijava"/></td>';
+                            treningTable += '<tr>' + trening + '</tr>';
+                        }
+                    }
+                    treningTable += '</table>';
+                    $('#treninzi').html(treningTable);
+                });
+
+
+                if (sessionStorage.getItem("username") != null) {
+                    $.get("api/user/" + sessionStorage.getItem("username"), function (data, status) {
+                        sessionStorage.setItem("ulogaTrenutnog", data.UlogaKorisnika);
+                    })
+                        .done(function () {
+                            $.get("api/fitnescentar/" + ime + "/" + grad + "/" + ulica + "/" + broj, function (data, status) {
+                                let ulogaTrenutna = sessionStorage.getItem("ulogaTrenutnog");
+                                let komentarTable = '';
+                                if (ulogaTrenutna == 2)
+                                    komentarTable += '<table class="content-table"><thead><th>Tekst</th><th>Ocena</th><th>Odobri</th></thead>';
+                                else
+                                    komentarTable += '<table class="content-table"><thead><th>Tekst</th><th>Ocena</th></thead>';
+                                for (element in data) {
+                                    if (ulogaTrenutna == 2) {
+                                        let komentar = '<td>' + data[element].TekstKomentara + '</td>';
+                                        komentar += '<td>' + data[element].Ocena + '</td>';
+                                        komentar += '<td><input type="submit" value="Odobri" class="btnOdobri" name="' + data[element].Id + '"/></td>';
+                                        komentarTable += '<tr>' + komentar + '</tr>';
+                                    }
+                                    else {
+                                        if (data[element].Odobren == true) {
+                                            let komentar = '<td>' + data[element].TekstKomentara + '</td>';
+                                            komentar += '<td>' + data[element].Ocena + '</td>';
+                                            komentarTable += '<tr>' + komentar + '</tr>';
+                                        }
+                                    }
+                                }
+                                komentarTable += '</table>';
+                                $('#komentari').html(komentarTable);
+                            });
+                        });
+                }
+                else {
+                    $.get("api/fitnescentar/" + ime + "/" + grad + "/" + ulica + "/" + broj, function (data, status) {
+                        let komentarTable = '<table class="content-table"><thead><th>Tekst</th><th>Ocena</th></thead>';
+                        for (element in data) {
+                            if (data[element].Odobren == true) {
+                                let komentar = '<td>' + data[element].TekstKomentara + '</td>';
+                                komentar += '<td>' + data[element].Ocena + '</td>';
+                                komentarTable += '<tr>' + komentar + '</tr>';
+                            }
+                        }
+                        komentarTable += '</table>';
+                        $('#komentari').html(komentarTable);
+                    });
+                }
+            });
+        }
+
+        function odobri(id) {
+            console.log(id);
+            $.post('api/helper/', { 'IdKomentar': id, 'IdVlasnik': sessionStorage.getItem("username"), 'Odobren': true },
+                function (result) {
+                    alert("Uspesno odobren komentar.")
+                })
+                .fail(function () {
+                    alert("Greska pri odobravanju.")
+                })
+        }
+
+        function prijavaNaTrening(idTreninga) {
+            let username = sessionStorage.getItem("username");
+            $.post('api/user/', { 'idKorisnik': username, 'idTrening': idTreninga },
+                function (result) {
+                    console.log("ok");
+                    alert('Uspesno ste prijavljeni na trening!');
+                    window.location.href = "Pages/details.html";
+                })
+                .fail(function () {
+                    alert("Ne mozete se prijaviti na trening!");
+                });
+        }
+
+        function napisiKomentar() {
+            let username = sessionStorage.getItem("username");
+            let id = localStorage.getItem("tempId");
+
+            let tekstKomentara = $("input[name=textKomentara]").val();
+            if (tekstKomentara.replace(/\s+/g, '').length == 0) {
+                alert('Unesite tekst komentara!');
+                return;
+            }
+
+            let ocenaKomentara = $("input[name=ocenaKomentara]").val();
+            if (ocenaKomentara > 5 || ocenaKomentara < 1) {
+                alert('Ocena mora biti u rasponu od 1 do 5!');
+                return;
+            }
+
+            $.post('api/user/' + username + '/' + id, { "TekstKomentara": tekstKomentara, "Ocena": ocenaKomentara },
+                function (result) {
+                    alert("Komentar je uspesno poslat, potrebno je da se odobri!");
+                    $("input[name=textKomentara]").val(' ');
+                    $("input[name=ocenaKomentara]").val(' ');
+                })
+                .fail(function () {
+                    alert("Ne mozete ostaviti komentar!");
+                });
+        }
+
+        function logout() {
+            sessionStorage.removeItem("username");
+        }
+
+        function hideURLParams() {
+            history.pushState({}, "", '/about');
+        }
+
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="left" href="Pages/index.html">Home</a></li>
+            <li><a name="logout" class="right" href="Pages/index.html" onclick="logout()">Log Out</a></li>
+        </ul>
+    </nav>
+    <h1 id="naslov"></h1>
+    <div id="content"></div>
+    <div id="treninzi"></div><br />
+    <div id="komentari"></div><br />
+    <div id="komentar">
+        <label class="labela">Tekst:</label><input class="inputType" type="text" placeholder="Unesite tekst...." name="textKomentara" /><br />
+        <label class="labela">Ocena:</label><input class="inputType" type="number" placeholder="1-5" name="ocenaKomentara" /><br />
+        <input class="btnSort" type="submit" value="Ostavi Komentar" name="komentar" id="#btnComment" /> <br /><br />
+    </div>
+</body>
+</html>

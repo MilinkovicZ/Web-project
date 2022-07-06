@@ -1,0 +1,1771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfKomentar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Komentar>
+    <Korisnik>
+      <Treninzi>
+        <GrupniTrening>
+          <Naziv>Trening 1</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>90</TrajanjeTreninga>
+          <VremeTreninga>19/10/2022 02:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>10</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>1</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 2</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>100</TrajanjeTreninga>
+          <VremeTreninga>19/10/2022 06:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>8</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>2</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 5</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Fitnes Centar Nis</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Desanke Maksimovic</Ulica>
+              <Broj>11</Broj>
+              <Grad>Nis</Grad>
+              <PostanskiBroj>31000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2014</GodinaOtvaranja>
+            <Vlasnik>vlasnik2</Vlasnik>
+            <MesecnaCena>2000</MesecnaCena>
+            <GodisnjaCena>19000</GodisnjaCena>
+            <CenaJednogTreninga>700</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>2</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>15/07/2022 08:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>7</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>7845</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 8</Naziv>
+          <TipTreninga>YOGA</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>17/07/2021 20:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>17</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>8</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 7</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Fitnes Centar Nis</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Desanke Maksimovic</Ulica>
+              <Broj>11</Broj>
+              <Grad>Nis</Grad>
+              <PostanskiBroj>31000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2014</GodinaOtvaranja>
+            <Vlasnik>vlasnik2</Vlasnik>
+            <MesecnaCena>2000</MesecnaCena>
+            <GodisnjaCena>19000</GodisnjaCena>
+            <CenaJednogTreninga>700</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>2</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>15/07/2021 04:40</VremeTreninga>
+          <MaksimalanBrojPosetilaca>11</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>7</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 3</Naziv>
+          <TipTreninga>YOGA</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>55</TrajanjeTreninga>
+          <VremeTreninga>20/10/2022 00:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>20</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>3</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Body Building</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>45</TrajanjeTreninga>
+          <VremeTreninga>09/11/2022 06:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>5</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>8779</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 20</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>100</TrajanjeTreninga>
+          <VremeTreninga>16/04/2021 06:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>11</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>20</Id>
+        </GrupniTrening>
+      </Treninzi>
+      <FitnesCentri />
+      <Blokiran>false</Blokiran>
+      <KorisnickoIme>zdravko</KorisnickoIme>
+      <Lozinka>zdravko</Lozinka>
+      <Ime>Zdravko</Ime>
+      <Prezime>Zdravko</Prezime>
+      <PolKorisnika>MUSKI</PolKorisnika>
+      <Email>zzzzzzzzzzzzzzzzzz@gmail.com</Email>
+      <DatumRodjenja>12/08/2000</DatumRodjenja>
+      <UlogaKorisnika>POSETILAC</UlogaKorisnika>
+    </Korisnik>
+    <FitnesCentar>
+      <Naziv>Ahilej Novi</Naziv>
+      <AdresaFitnesCentra>
+        <Ulica>Kralja Milana</Ulica>
+        <Broj>24</Broj>
+        <Grad>Beograd</Grad>
+        <PostanskiBroj>19000</PostanskiBroj>
+      </AdresaFitnesCentra>
+      <GodinaOtvaranja>2017</GodinaOtvaranja>
+      <Vlasnik>vlasnik3</Vlasnik>
+      <MesecnaCena>2600</MesecnaCena>
+      <GodisnjaCena>25000</GodisnjaCena>
+      <CenaJednogTreninga>1000</CenaJednogTreninga>
+      <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+      <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+      <Obrisan>false</Obrisan>
+      <Id>3</Id>
+    </FitnesCentar>
+    <TekstKomentara>Odlicno mesto za trening</TekstKomentara>
+    <Ocena>4</Ocena>
+    <Odobren>false</Odobren>
+    <Id>1</Id>
+  </Komentar>
+  <Komentar>
+    <Korisnik>
+      <Treninzi>
+        <GrupniTrening>
+          <Naziv>Trening 1</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>90</TrajanjeTreninga>
+          <VremeTreninga>19/10/2022 02:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>10</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>1</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 2</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>100</TrajanjeTreninga>
+          <VremeTreninga>19/10/2022 06:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>8</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>2</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 5</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Fitnes Centar Nis</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Desanke Maksimovic</Ulica>
+              <Broj>11</Broj>
+              <Grad>Nis</Grad>
+              <PostanskiBroj>31000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2014</GodinaOtvaranja>
+            <Vlasnik>vlasnik2</Vlasnik>
+            <MesecnaCena>2000</MesecnaCena>
+            <GodisnjaCena>19000</GodisnjaCena>
+            <CenaJednogTreninga>700</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>2</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>15/07/2022 08:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>7</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>7845</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 8</Naziv>
+          <TipTreninga>YOGA</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>17/07/2021 20:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>17</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>8</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 7</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Fitnes Centar Nis</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Desanke Maksimovic</Ulica>
+              <Broj>11</Broj>
+              <Grad>Nis</Grad>
+              <PostanskiBroj>31000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2014</GodinaOtvaranja>
+            <Vlasnik>vlasnik2</Vlasnik>
+            <MesecnaCena>2000</MesecnaCena>
+            <GodisnjaCena>19000</GodisnjaCena>
+            <CenaJednogTreninga>700</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>2</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>15/07/2021 04:40</VremeTreninga>
+          <MaksimalanBrojPosetilaca>11</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>7</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 3</Naziv>
+          <TipTreninga>YOGA</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>55</TrajanjeTreninga>
+          <VremeTreninga>20/10/2022 00:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>20</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>3</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Body Building</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>45</TrajanjeTreninga>
+          <VremeTreninga>09/11/2022 06:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>5</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>8779</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 20</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>100</TrajanjeTreninga>
+          <VremeTreninga>16/04/2021 06:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>11</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>20</Id>
+        </GrupniTrening>
+      </Treninzi>
+      <FitnesCentri />
+      <Blokiran>false</Blokiran>
+      <KorisnickoIme>zdravko</KorisnickoIme>
+      <Lozinka>zdravko</Lozinka>
+      <Ime>Zdravko</Ime>
+      <Prezime>Zdravko</Prezime>
+      <PolKorisnika>MUSKI</PolKorisnika>
+      <Email>zzzzzzzzzzzzzzzzzz@gmail.com</Email>
+      <DatumRodjenja>12/08/2000</DatumRodjenja>
+      <UlogaKorisnika>POSETILAC</UlogaKorisnika>
+    </Korisnik>
+    <FitnesCentar>
+      <Naziv>Fitnes Centar Nis</Naziv>
+      <AdresaFitnesCentra>
+        <Ulica>Desanke Maksimovic</Ulica>
+        <Broj>11</Broj>
+        <Grad>Nis</Grad>
+        <PostanskiBroj>31000</PostanskiBroj>
+      </AdresaFitnesCentra>
+      <GodinaOtvaranja>2014</GodinaOtvaranja>
+      <Vlasnik>vlasnik2</Vlasnik>
+      <MesecnaCena>2000</MesecnaCena>
+      <GodisnjaCena>19000</GodisnjaCena>
+      <CenaJednogTreninga>700</CenaJednogTreninga>
+      <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+      <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+      <Obrisan>false</Obrisan>
+      <Id>2</Id>
+    </FitnesCentar>
+    <TekstKomentara>Solidno.</TekstKomentara>
+    <Ocena>3</Ocena>
+    <Odobren>true</Odobren>
+    <Id>2</Id>
+  </Komentar>
+  <Komentar>
+    <Korisnik>
+      <Treninzi>
+        <GrupniTrening>
+          <Naziv>Trening 3</Naziv>
+          <TipTreninga>YOGA</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>55</TrajanjeTreninga>
+          <VremeTreninga>19/10/2022 18:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>20</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+            <string>zriki</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>3</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 2</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Petra</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2019</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>27000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1400</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>100</TrajanjeTreninga>
+          <VremeTreninga>19/10/2022 00:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>8</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+            <string>zriki</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>2</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 7</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Fitnes Centar Nis</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Desanke Maksimovic</Ulica>
+              <Broj>11</Broj>
+              <Grad>Nis</Grad>
+              <PostanskiBroj>31000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2014</GodinaOtvaranja>
+            <Vlasnik>vlasnik2</Vlasnik>
+            <MesecnaCena>2000</MesecnaCena>
+            <GodisnjaCena>19000</GodisnjaCena>
+            <CenaJednogTreninga>700</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>2</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>14/07/2021 22:40</VremeTreninga>
+          <MaksimalanBrojPosetilaca>11</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+            <string>zriki</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>7</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 11</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>15</TrajanjeTreninga>
+          <VremeTreninga>06/07/2022 15:00</VremeTreninga>
+          <MaksimalanBrojPosetilaca>5</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>11</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 21</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>45</TrajanjeTreninga>
+          <VremeTreninga>12/06/2022 03:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>22</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+            <string>zriki</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>21</Id>
+        </GrupniTrening>
+      </Treninzi>
+      <FitnesCentri />
+      <Blokiran>false</Blokiran>
+      <KorisnickoIme>zriki</KorisnickoIme>
+      <Lozinka>zriki</Lozinka>
+      <Ime>zriki</Ime>
+      <Prezime>zriki</Prezime>
+      <PolKorisnika>MUSKI</PolKorisnika>
+      <Email>zdravko@zriki.com</Email>
+      <DatumRodjenja>04/06/2022</DatumRodjenja>
+      <UlogaKorisnika>POSETILAC</UlogaKorisnika>
+    </Korisnik>
+    <FitnesCentar>
+      <Naziv>Fitnes Centar Nis</Naziv>
+      <AdresaFitnesCentra>
+        <Ulica>Desanke Maksimovic</Ulica>
+        <Broj>11</Broj>
+        <Grad>Nis</Grad>
+        <PostanskiBroj>31000</PostanskiBroj>
+      </AdresaFitnesCentra>
+      <GodinaOtvaranja>2014</GodinaOtvaranja>
+      <Vlasnik>vlasnik2</Vlasnik>
+      <MesecnaCena>2000</MesecnaCena>
+      <GodisnjaCena>19000</GodisnjaCena>
+      <CenaJednogTreninga>700</CenaJednogTreninga>
+      <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+      <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+      <Obrisan>false</Obrisan>
+      <Id>2</Id>
+    </FitnesCentar>
+    <TekstKomentara>Dobar fitnes centar</TekstKomentara>
+    <Ocena>4</Ocena>
+    <Odobren>false</Odobren>
+    <Id>3</Id>
+  </Komentar>
+  <Komentar>
+    <Korisnik>
+      <Treninzi>
+        <GrupniTrening>
+          <Naziv>Trening 3</Naziv>
+          <TipTreninga>YOGA</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>55</TrajanjeTreninga>
+          <VremeTreninga>19/10/2022 18:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>20</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+            <string>zriki</string>
+            <string>zdravko123</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>3</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 11</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>15</TrajanjeTreninga>
+          <VremeTreninga>06/07/2022 19:00</VremeTreninga>
+          <MaksimalanBrojPosetilaca>5</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko123</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>11</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>SuperDobarTrening</Naziv>
+          <TipTreninga>YOGA</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Petra</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2019</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>27000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1400</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>105</TrajanjeTreninga>
+          <VremeTreninga>01/01/2024 20:00</VremeTreninga>
+          <MaksimalanBrojPosetilaca>7</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>9031</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 5</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Fitnes Centar Nis</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Desanke Maksimovic</Ulica>
+              <Broj>11</Broj>
+              <Grad>Nis</Grad>
+              <PostanskiBroj>31000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2014</GodinaOtvaranja>
+            <Vlasnik>vlasnik2</Vlasnik>
+            <MesecnaCena>2000</MesecnaCena>
+            <GodisnjaCena>19000</GodisnjaCena>
+            <CenaJednogTreninga>700</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>2</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>15/07/2022 04:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>7</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+            <string>zdravko123</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>5</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 13</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>15</TrajanjeTreninga>
+          <VremeTreninga>12/10/2021 15:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>10</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>13</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 21</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>45</TrajanjeTreninga>
+          <VremeTreninga>12/06/2022 03:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>22</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+            <string>zriki</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>21</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 20</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>100</TrajanjeTreninga>
+          <VremeTreninga>16/04/2021 06:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>11</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>20</Id>
+        </GrupniTrening>
+      </Treninzi>
+      <FitnesCentri />
+      <Blokiran>false</Blokiran>
+      <KorisnickoIme>zdravko123</KorisnickoIme>
+      <Lozinka>zzzzzz</Lozinka>
+      <Ime>Zdravko1234</Ime>
+      <Prezime>Milinkovic1234</Prezime>
+      <PolKorisnika>ZENSKI</PolKorisnika>
+      <Email>zdravko123@gmail.com</Email>
+      <DatumRodjenja>11/02/2000</DatumRodjenja>
+      <UlogaKorisnika>POSETILAC</UlogaKorisnika>
+    </Korisnik>
+    <FitnesCentar>
+      <Naziv>Brus Li</Naziv>
+      <AdresaFitnesCentra>
+        <Ulica>Petra Drapsina</Ulica>
+        <Broj>33</Broj>
+        <Grad>Pirot</Grad>
+        <PostanskiBroj>27500</PostanskiBroj>
+      </AdresaFitnesCentra>
+      <GodinaOtvaranja>2022</GodinaOtvaranja>
+      <Vlasnik>vlasnik1</Vlasnik>
+      <MesecnaCena>2200</MesecnaCena>
+      <GodisnjaCena>21350</GodisnjaCena>
+      <CenaJednogTreninga>800</CenaJednogTreninga>
+      <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+      <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+      <Obrisan>false</Obrisan>
+      <Id>1</Id>
+    </FitnesCentar>
+    <TekstKomentara>Super mesto za trening</TekstKomentara>
+    <Ocena>5</Ocena>
+    <Odobren>true</Odobren>
+    <Id>4</Id>
+  </Komentar>
+  <Komentar>
+    <Korisnik>
+      <Treninzi>
+        <GrupniTrening>
+          <Naziv>Trening 3</Naziv>
+          <TipTreninga>YOGA</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>55</TrajanjeTreninga>
+          <VremeTreninga>20/10/2022 06:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>20</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>3</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 2</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>100</TrajanjeTreninga>
+          <VremeTreninga>19/10/2022 12:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>8</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>2</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 7</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Fitnes Centar Nis</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Desanke Maksimovic</Ulica>
+              <Broj>11</Broj>
+              <Grad>Nis</Grad>
+              <PostanskiBroj>31000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2014</GodinaOtvaranja>
+            <Vlasnik>vlasnik2</Vlasnik>
+            <MesecnaCena>2000</MesecnaCena>
+            <GodisnjaCena>19000</GodisnjaCena>
+            <CenaJednogTreninga>700</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>2</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>15/07/2021 10:40</VremeTreninga>
+          <MaksimalanBrojPosetilaca>11</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>7</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 11</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>15</TrajanjeTreninga>
+          <VremeTreninga>07/07/2022 03:00</VremeTreninga>
+          <MaksimalanBrojPosetilaca>5</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>11</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 21</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>45</TrajanjeTreninga>
+          <VremeTreninga>12/06/2022 03:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>22</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+            <string>zriki</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>21</Id>
+        </GrupniTrening>
+      </Treninzi>
+      <FitnesCentri />
+      <Blokiran>false</Blokiran>
+      <KorisnickoIme>zriki</KorisnickoIme>
+      <Lozinka>zriki</Lozinka>
+      <Ime>zriki</Ime>
+      <Prezime>zriki</Prezime>
+      <PolKorisnika>MUSKI</PolKorisnika>
+      <Email>zdravko@zriki.com</Email>
+      <DatumRodjenja>04/06/2022</DatumRodjenja>
+      <UlogaKorisnika>POSETILAC</UlogaKorisnika>
+    </Korisnik>
+    <FitnesCentar>
+      <Naziv>Fitnes Centar Nis</Naziv>
+      <AdresaFitnesCentra>
+        <Ulica>Desanke Maksimovic</Ulica>
+        <Broj>11</Broj>
+        <Grad>Nis</Grad>
+        <PostanskiBroj>31000</PostanskiBroj>
+      </AdresaFitnesCentra>
+      <GodinaOtvaranja>2014</GodinaOtvaranja>
+      <Vlasnik>vlasnik2</Vlasnik>
+      <MesecnaCena>2000</MesecnaCena>
+      <GodisnjaCena>19000</GodisnjaCena>
+      <CenaJednogTreninga>700</CenaJednogTreninga>
+      <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+      <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+      <Obrisan>false</Obrisan>
+      <Id>2</Id>
+    </FitnesCentar>
+    <TekstKomentara>Dobar Fitnes Centar</TekstKomentara>
+    <Ocena>4</Ocena>
+    <Odobren>true</Odobren>
+    <Id>5</Id>
+  </Komentar>
+  <Komentar>
+    <Korisnik>
+      <Treninzi>
+        <GrupniTrening>
+          <Naziv>Trening 1</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>90</TrajanjeTreninga>
+          <VremeTreninga>19/10/2022 06:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>10</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>1</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 2</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>100</TrajanjeTreninga>
+          <VremeTreninga>19/10/2022 10:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>8</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>2</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 5</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Fitnes Centar Nis</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Desanke Maksimovic</Ulica>
+              <Broj>11</Broj>
+              <Grad>Nis</Grad>
+              <PostanskiBroj>31000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2014</GodinaOtvaranja>
+            <Vlasnik>vlasnik2</Vlasnik>
+            <MesecnaCena>2000</MesecnaCena>
+            <GodisnjaCena>19000</GodisnjaCena>
+            <CenaJednogTreninga>700</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>2</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>15/07/2022 12:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>7</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>7845</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 8</Naziv>
+          <TipTreninga>YOGA</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>18/07/2021 00:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>17</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>8</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 7</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Fitnes Centar Nis</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Desanke Maksimovic</Ulica>
+              <Broj>11</Broj>
+              <Grad>Nis</Grad>
+              <PostanskiBroj>31000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2014</GodinaOtvaranja>
+            <Vlasnik>vlasnik2</Vlasnik>
+            <MesecnaCena>2000</MesecnaCena>
+            <GodisnjaCena>19000</GodisnjaCena>
+            <CenaJednogTreninga>700</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>2</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>15/07/2021 08:40</VremeTreninga>
+          <MaksimalanBrojPosetilaca>11</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>7</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 3</Naziv>
+          <TipTreninga>YOGA</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>55</TrajanjeTreninga>
+          <VremeTreninga>20/10/2022 04:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>20</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>3</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Body Building</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd (Na VodI)</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>45</TrajanjeTreninga>
+          <VremeTreninga>09/11/2022 08:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>5</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>8779</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 20</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>100</TrajanjeTreninga>
+          <VremeTreninga>16/04/2021 06:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>11</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>20</Id>
+        </GrupniTrening>
+      </Treninzi>
+      <FitnesCentri />
+      <Blokiran>false</Blokiran>
+      <KorisnickoIme>zdravko</KorisnickoIme>
+      <Lozinka>zdravko</Lozinka>
+      <Ime>Zdravko</Ime>
+      <Prezime>Zdravko</Prezime>
+      <PolKorisnika>MUSKI</PolKorisnika>
+      <Email>zzzzzzzzzzzzzzzzzz@gmail.com</Email>
+      <DatumRodjenja>12/08/2000</DatumRodjenja>
+      <UlogaKorisnika>POSETILAC</UlogaKorisnika>
+    </Korisnik>
+    <FitnesCentar>
+      <Naziv>Ahilej Novi</Naziv>
+      <AdresaFitnesCentra>
+        <Ulica>Kralja Milana</Ulica>
+        <Broj>24</Broj>
+        <Grad>Beograd</Grad>
+        <PostanskiBroj>19000</PostanskiBroj>
+      </AdresaFitnesCentra>
+      <GodinaOtvaranja>2017</GodinaOtvaranja>
+      <Vlasnik>vlasnik3</Vlasnik>
+      <MesecnaCena>2600</MesecnaCena>
+      <GodisnjaCena>25000</GodisnjaCena>
+      <CenaJednogTreninga>1000</CenaJednogTreninga>
+      <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+      <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+      <Obrisan>false</Obrisan>
+      <Id>3</Id>
+    </FitnesCentar>
+    <TekstKomentara>Super Trening Centar</TekstKomentara>
+    <Ocena>5</Ocena>
+    <Odobren>true</Odobren>
+    <Id>15</Id>
+  </Komentar>
+  <Komentar>
+    <Korisnik>
+      <Treninzi>
+        <GrupniTrening>
+          <Naziv>Trening 3</Naziv>
+          <TipTreninga>YOGA</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>55</TrajanjeTreninga>
+          <VremeTreninga>20/10/2022 02:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>20</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko123</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>3</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 11</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>15</TrajanjeTreninga>
+          <VremeTreninga>07/07/2022 03:00</VremeTreninga>
+          <MaksimalanBrojPosetilaca>5</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zriki</string>
+            <string>zdravko123</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>11</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>SuperDobarTrening</Naziv>
+          <TipTreninga>YOGA</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>105</TrajanjeTreninga>
+          <VremeTreninga>02/01/2024 01:00</VremeTreninga>
+          <MaksimalanBrojPosetilaca>7</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>9031</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 5</Naziv>
+          <TipTreninga>LES_MILLS_TONE</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Fitnes Centar Nis</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Desanke Maksimovic</Ulica>
+              <Broj>11</Broj>
+              <Grad>Nis</Grad>
+              <PostanskiBroj>31000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2014</GodinaOtvaranja>
+            <Vlasnik>vlasnik2</Vlasnik>
+            <MesecnaCena>2000</MesecnaCena>
+            <GodisnjaCena>19000</GodisnjaCena>
+            <CenaJednogTreninga>700</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1000</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>2</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>120</TrajanjeTreninga>
+          <VremeTreninga>15/07/2022 12:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>7</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>5</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 13</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Brus Li</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Petra Drapsina</Ulica>
+              <Broj>33</Broj>
+              <Grad>Pirot</Grad>
+              <PostanskiBroj>27500</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2022</GodinaOtvaranja>
+            <Vlasnik>vlasnik1</Vlasnik>
+            <MesecnaCena>2200</MesecnaCena>
+            <GodisnjaCena>21350</GodisnjaCena>
+            <CenaJednogTreninga>800</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>500</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1200</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>1</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>15</TrajanjeTreninga>
+          <VremeTreninga>12/10/2021 23:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>10</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>13</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>BIceps</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Zver</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Becejska</Ulica>
+              <Broj>11</Broj>
+              <Grad>Becej</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2021</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>800</MesecnaCena>
+            <GodisnjaCena>6600</GodisnjaCena>
+            <CenaJednogTreninga>550</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>600</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>650</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>4775</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>90</TrajanjeTreninga>
+          <VremeTreninga>08/08/2022 15:00</VremeTreninga>
+          <MaksimalanBrojPosetilaca>5</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>5784</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 20</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>100</TrajanjeTreninga>
+          <VremeTreninga>16/04/2021 06:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>11</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+            <string>zdravko</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>20</Id>
+        </GrupniTrening>
+        <GrupniTrening>
+          <Naziv>Trening 21</Naziv>
+          <TipTreninga>BODY_PUMP</TipTreninga>
+          <FitnesCentarOdrzavanja>
+            <Naziv>Ahilej Novi</Naziv>
+            <AdresaFitnesCentra>
+              <Ulica>Kralja Milana</Ulica>
+              <Broj>24</Broj>
+              <Grad>Beograd</Grad>
+              <PostanskiBroj>19000</PostanskiBroj>
+            </AdresaFitnesCentra>
+            <GodinaOtvaranja>2017</GodinaOtvaranja>
+            <Vlasnik>vlasnik3</Vlasnik>
+            <MesecnaCena>2600</MesecnaCena>
+            <GodisnjaCena>25000</GodisnjaCena>
+            <CenaJednogTreninga>1000</CenaJednogTreninga>
+            <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+            <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+            <Obrisan>false</Obrisan>
+            <Id>3</Id>
+          </FitnesCentarOdrzavanja>
+          <TrajanjeTreninga>45</TrajanjeTreninga>
+          <VremeTreninga>12/06/2022 03:30</VremeTreninga>
+          <MaksimalanBrojPosetilaca>22</MaksimalanBrojPosetilaca>
+          <SpisakPosetilaca>
+            <string>zdravko123</string>
+            <string>zriki</string>
+          </SpisakPosetilaca>
+          <Obrisan>false</Obrisan>
+          <Id>21</Id>
+        </GrupniTrening>
+      </Treninzi>
+      <FitnesCentri />
+      <Blokiran>false</Blokiran>
+      <KorisnickoIme>zdravko123</KorisnickoIme>
+      <Lozinka>zzzzzz</Lozinka>
+      <Ime>Zdravko1234</Ime>
+      <Prezime>Milinkovic1234</Prezime>
+      <PolKorisnika>ZENSKI</PolKorisnika>
+      <Email>zdravko123@gmail.com</Email>
+      <DatumRodjenja>11/02/2000</DatumRodjenja>
+      <UlogaKorisnika>POSETILAC</UlogaKorisnika>
+    </Korisnik>
+    <FitnesCentar>
+      <Naziv>Ahilej Novi</Naziv>
+      <AdresaFitnesCentra>
+        <Ulica>Kralja Milana</Ulica>
+        <Broj>24</Broj>
+        <Grad>Beograd</Grad>
+        <PostanskiBroj>19000</PostanskiBroj>
+      </AdresaFitnesCentra>
+      <GodinaOtvaranja>2017</GodinaOtvaranja>
+      <Vlasnik>vlasnik3</Vlasnik>
+      <MesecnaCena>2600</MesecnaCena>
+      <GodisnjaCena>25000</GodisnjaCena>
+      <CenaJednogTreninga>1000</CenaJednogTreninga>
+      <CenaJednogTreningaGrupni>800</CenaJednogTreningaGrupni>
+      <CenaJednogTreningaPersonalni>1415</CenaJednogTreningaPersonalni>
+      <Obrisan>false</Obrisan>
+      <Id>3</Id>
+    </FitnesCentar>
+    <TekstKomentara>TestOdobravanje</TekstKomentara>
+    <Ocena>4</Ocena>
+    <Odobren>true</Odobren>
+    <Id>16</Id>
+  </Komentar>
+</ArrayOfKomentar>

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Azuziraj Treninge</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            hideURLParams();
+            showDetails();
+
+            $(document).on("click", "#btnUpdate", function () {
+                changeDetails();
+            });
+        });
+
+        function changeDetails() {
+            let id = window.localStorage.getItem("idTrening");
+            $.ajax({
+                url: "api/trening/" + id,
+                method: "PUT",
+                data:
+                {
+                    'Naziv': $("#naziv").val(),
+                    'TipTreninga': document.getElementById('lista.tip').value,
+                    'TrajanjeTreninga': $("#trajanje").val(),
+                    'VremeTreninga': $("#vreme").val(),
+                    'MaksimalanBrojPosetilaca': $("#maks").val(),
+                },
+                success: (result) => { alert("Uspesno"); window.location.href = "Pages/modifyTraining.html" },
+                error: (xhr, status, err) => { alert("Failed to change!") }
+            }).done();
+        }
+
+        function showDetails() {
+            let id = window.localStorage.getItem("idTrening");
+
+            $.get("api/helper/" + id, function (data, status) {
+                let naslov = "Azuriranje treninga, " + data.Naziv + ":";
+                $("#h1n").html(naslov);
+
+                let table = `<table>
+                        <tr>
+                            <td><label class="labela">Naziv:</label></td>
+                            <td><input class="inputType" type="text" name="Naziv" id="naziv" value="${data.Naziv}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Tip:</label></td>
+                            <td><input class="inputType" list="lista.tip-datalist" id="lista.tip" placeholder="${data.TipTreninga == 0 ? "YOGA" : (data.TipTreninga == 1 ? "LES_MILLS_TONE" : "BODY_PUMP")}" />
+                                     <datalist id="lista.tip-datalist">
+                                            <option value="YOGA"/>
+                                            <option value="LES_MILLS_TONE"/>
+                                            <option value="BODY_PUMP"/>
+                                     </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Trajanje:</label></td>
+                            <td><input class="inputType" type="number" name="Trajanje" id="trajanje" value="${data.TrajanjeTreninga}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Vreme treninga</label></td>
+                            <td><input class="inputType" type="string" name="Vreme" placeholder="YYYY-MM-DD HH:MM" id="vreme" value="${data.VremeTreninga}" /></td>
+                        </tr>
+                         <tr>
+                            <td><label class="labela">Maksimalan broj posetilaca:</label></td>
+                            <td><input class="inputType" type="number" name="Maks" id="maks" value="${data.MaksimalanBrojPosetilaca}" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input class="btnSort" type="submit" value="Azuriraj Trening" id="btnUpdate" />
+                            </td>
+                        </tr>
+                    </table>`
+
+                $("#trenutni").html(table);
+            });
+
+        }
+
+        function logout() {
+            sessionStorage.removeItem("username");
+        }
+
+        function hideURLParams() {
+            history.pushState({}, "", '/Modify');
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="left" href="Pages/index.html">Home</a></li>
+            <li><a class="left" href="Pages/trainerTrainings.html">My Fitnes Centers</a></li>
+            <li><a class="right" href="Pages/index.html" onclick="logout()">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="h1n"></h1>
+    <div id="trenutni"></div>   
+</body>
+</html>

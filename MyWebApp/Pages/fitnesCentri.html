@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Fitnes centri - pregled</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            hideURLParams();
+            show();
+
+            $(document).on("click", ".btnObrisi", function () {
+                let id = $(this).attr("name")
+                obrisi(id);
+            });
+
+            $(document).on("click", ".btnModify", function () {
+                let id = $(this).attr("name")
+                window.localStorage.setItem("idFitnesCentar", id);
+                window.location.href = "Pages/modifyFitnesCentar.html";
+            });
+
+            $('#btnBlokiraj').click(function () {
+                blokiraj();
+            });
+
+            $('#btnAddTrener').click(function () {
+                dodajTrenera();
+            });
+
+        });
+
+        function dodajTrenera() {
+            let usernameVlasnik = sessionStorage.getItem("username");
+            let usernameTrener = $('#usernameTrener').val();
+            let naziv = $('#naziv').val();
+            let grad = $('#grad').val();
+            let ulica = $('#ulica').val();
+
+            if (usernameTrener.replace(/\s+/g, '').length == 0) {
+                alert('Unesite dobar username trenera!');
+                return;
+            }
+
+            if (naziv.replace(/\s+/g, '').length == 0) {
+                alert('Unesite dobar naziv!');
+                return;
+            }
+
+            if (grad.replace(/\s+/g, '').length == 0) {
+                alert('Unesite dobar naziv grada!');
+                return;
+            }
+
+            if (ulica.replace(/\s+/g, '').length == 0) {
+                alert('Unesite dobar naziv ulice!');
+                return;
+            }
+
+            $.post('api/vlasnikov', { 'VlasnikUsername': usernameVlasnik, 'TrenerUsername': usernameTrener, 'Naziv': naziv, 'Grad': grad, 'Ulica': ulica },
+                function (result) {
+                    alert('Uspesno dodat trener!');
+                    $('#usernameTrener').val(' ');
+                    $('#naziv').val(' ');
+                    $('#grad').val(' ');
+                    $('#ulica').val(' ');
+                })
+                .fail(function () {
+                    alert('Doslo je do greske!');
+                });
+        }
+
+        function blokiraj() {
+            let usernameVlasnik = sessionStorage.getItem("username");
+            let usernameTrener = $('#trenerNaziv').val();
+
+            if (usernameTrener.replace(/\s+/g, '').length == 0) {
+                alert('Unesite trenerovo korisnicko ime!');
+                return;
+            }
+
+
+            if (confirm("Da li ste sigurni da zelite da blokirate trenera?") == true) {
+                $.post('api/vlasnikov/' + usernameVlasnik, { 'KorisnickoIme': usernameTrener },
+                    function (result) {
+                        $('#trenerNaziv').val('');
+                        alert('Uspesno blokiran!');
+                    })
+                    .fail(function () {
+                        alert('Bezuspesno blokiranje!');
+                    });
+            }
+        }
+
+        function obrisi(id) {
+            console.log(id);
+            if (confirm("Da li ste sigurni da zelite da obrisete fitnes centar?") == true) {
+                $.ajax({
+                    url: "api/vlasnik/" + id,
+                    method: "DELETE",
+                    success: (result) => { alert("Uspesno obrisan!"); window.location.href = "Pages/fitnesCentri.html" },
+                    error: (xhr, status, err) => { alert("Nije obrisan! Ima zakazanih treninga!") }
+                }).done();
+            }
+
+        }
+
+        function show() {
+            let username = sessionStorage.getItem("username");
+            $.get("api/vlasnik/" + username, function (data, status) {
+                let FitnesCentriTabela = '<table class="content-table"><thead><th>Naziv</th><th>Adresa</th><th>Godina Otvaranja</th><th>Mesecna</th><th>Godisnja</th><th>Jedan Trening</th><th>Grupni Trening</th><th>Personalni Trening</th><th>Obrisi</th><th>Azuriraj</th></thead>';
+                for (element in data) {
+                    if (data[element].Obrisan == false) {
+                        let FitnesCentar = '<td>' + data[element].Naziv + '</td>'
+                        FitnesCentar += '<td>' + data[element].AdresaFitnesCentra.Ulica + " " + data[element].AdresaFitnesCentra.Broj + '</td>';
+                        FitnesCentar += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                        FitnesCentar += '<td>' + data[element].MesecnaCena + '</td>';
+                        FitnesCentar += '<td>' + data[element].GodisnjaCena + '</td>';
+                        FitnesCentar += '<td>' + data[element].CenaJednogTreninga + '</td>';
+                        FitnesCentar += '<td>' + data[element].CenaJednogTreningaGrupni + '</td>';
+                        FitnesCentar += '<td>' + data[element].CenaJednogTreningaPersonalni + '</td>';
+                        FitnesCentar += '<td><input type="submit", class="btnObrisi", value="Obrisi", name="' + data[element].Id + '"/></td>';
+                        FitnesCentar += '<td><input type="submit", class="btnModify", value="Azuriraj", name="' + data[element].Id + '"/></td>';
+                        FitnesCentriTabela += '<tr>' + FitnesCentar + '</tr>';
+                    }
+                }
+                FitnesCentriTablela = '</table>';
+                $('#fc').html(FitnesCentriTabela);
+            });
+        }
+
+        function logout() {
+            sessionStorage.removeItem("username");
+        }
+
+        function hideURLParams() {
+            history.pushState({}, "", '/Overview');
+        }
+
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="left" href="Pages/index.html">Home</a></li>
+            <li><a class="right" href="Pages/index.html" onclick="logout()">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <h1>Moji fitnes centri:</h1>
+    <div id="fc"></div><br />
+    <h2>Dodajte novog trenera:</h2>
+    <label class="labela">Korisnicko ime trenera:</label><input class="inputType" type="text" placeholder="Unesite korisicko ime..." id="usernameTrener" /><br />
+    <label class="labela">Fitnes Centar:</label><input class="inputType" type="text" id="naziv" placeholder="Naziv" /><input class="inputType" type="text" id="grad" placeholder="Grad" /><input class="inputType" type="text" id="ulica" placeholder="Ulica" /><br />
+    <input class="btnSort" type="submit" value="Dodaj Trenera" id="btnAddTrener" /><br /><br />
+    <h2>Blokiraj trenera:</h2>
+    <input class="inputType" type="text" placeholder="Unesite korisicko ime..." id="trenerNaziv" /><br />
+    <input class="btnSort" type="submit" value="Blokiraj" id="btnBlokiraj" />
+</body>
+</html>

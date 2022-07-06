@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            hideURLParams();
+            showDetails();
+
+            $(document).on("click", "#btnUpdate", function () {
+                changeDetails();
+            });
+        });
+
+        function changeDetails() {
+            let id = sessionStorage.getItem("username");
+            $.ajax({
+                url: "api/user/" + id,
+                method: "PUT",
+                data:
+                {
+                    'Ime': $("#ime").val(),
+                    'Prezime': $("#prezime").val(),
+                    'KorisnickoIme': $("#kime").val(),
+                    'Lozinka': $("#lozinka").val(),
+                    'Email': $("#email").val(),
+                    'DatumRodjenja': $("#datum").val(),
+                    'PolKorisnika': document.getElementById('lista.pol').value
+                },
+                success: (result) => {
+                    alert("Uspesno!");
+                    let username = $("#kime").val();
+                    sessionStorage.setItem("username", username);
+                    window.location.href = "Pages/profile.html";
+                },
+                error: (xhr, status, err) => { alert("Failed to change!") }
+            }).done();
+        }
+
+        function showDetails() {
+            let username = sessionStorage.getItem("username");
+
+            let naslov = "Dobrodosao, " + username + "!";
+            $("#naslov").html(naslov);
+
+            $.get("api/user/" + username, function (data, status) {
+                const myArray = data.DatumRodjenja.split("/");
+                const datum = myArray[2] + "-" + myArray[1] + "-" + myArray[0];
+
+                let table = `<table>
+                        <tr>
+                            <td><label class="labela">Ime:</label></td>
+                            <td><input class="inputType" type="text" name="Ime" id="ime" value="${data.Ime}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Prezime:</label></td>
+                            <td><input class="inputType" type="text" name="Prezime" id="prezime" value="${data.Prezime}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Korisnicko Ime:</label></td>
+                            <td><input class="inputType" type="text" name="KorisnickoIme" id="kime" value="${data.KorisnickoIme}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Lozinka:</label></td>
+                            <td><input class="inputType" type="password" name="Lozinka" id="lozinka" value="${data.Lozinka}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Email:</label></td>
+                            <td><input class="inputType" type="email" name="Email" id="email" value="${data.Email}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Datum Rodjenjda:</label></td>
+                            <td><input class="inputType" type="date" name="DatumRodjenja" id="datum" value="${datum}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label class="labela">Pol:</label></td>
+                            <td>
+                                <input class="inputType" list="lista.pol-datalist" id="lista.pol" placeholder="${data.PolKorisnika == 0 ? "MUSKI" : "ZENSKI"}" />
+                                <datalist id="lista.pol-datalist">
+                                    <option value="MUSKI"/>
+                                    <option value="ZENSKI" />
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" class="btnSort" value="Azuriraj Podatke" id="btnUpdate" />
+                            </td>
+                        </tr>
+                    </table>`
+
+                $("#podaci").html(table);
+            });
+
+        }
+
+        function logout() {
+            sessionStorage.removeItem("username");
+        }
+
+        function hideURLParams() {
+            history.pushState({}, "", '/MyProfile');
+        }
+
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="left" href="Pages/index.html">Home</a></li>
+            <li><a class="right" href="Pages/index.html" onclick="logout()">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="naslov"></h1>
+    <div id="podaci"></div>
+</body>
+</html>
